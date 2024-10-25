@@ -6,7 +6,7 @@ This is a RESTful API for managing a todo list using Express.js and MongoDB.
 
 - CRUD operations for todos
 - API endpoints for creating, reading, updating, and deleting todos
-- Error handling and status codesREADME.mdREADME.md
+- Error handling and status codes
 - CORS configuration for frontend communication
 
 ## Setup
