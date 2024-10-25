@@ -1,9 +1,16 @@
 import express, { Request, Response } from "express";
 import todoRoutes from "./routes/todos";
 import mongoose from "mongoose";
+import cors from "cors";
 
 const app = express();
 const PORT: string = process.env.port || "5500";
+app.use(
+  cors({
+    origin: "http://localhost:5501",
+    methods: "GET,,PUT,POST,DELETE",
+  })
+);
 
 app.use(express.json());
 app.use("/api/todos", todoRoutes);
