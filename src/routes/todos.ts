@@ -40,12 +40,13 @@ router.get("/:id", async (req: Request, res: Response) => {
 router.put("/:id", async (req: Request, res: Response) => {
   try {
     const id = req.params.id;
-    const { title, description } = req.body;
+    const { title, description, completed } = req.body;
     const updatedTodo = await Todo.findByIdAndUpdate(
       id,
       {
         title,
         description,
+        completed,
       },
       {
         new: true,
